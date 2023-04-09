@@ -7,6 +7,6 @@ import "../styles/index.css";
 
 //import your own components
 import Clock from "./component/clock.jsx";
-console.log("sdasd");
+
 //render your react application
 ReactDOM.render(<Clock />, document.querySelector("#app"));
