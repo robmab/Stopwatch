@@ -1,36 +1,52 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; 
 import { faClock } from "@fortawesome/free-regular-svg-icons";
 
+import PropTypes from "prop-types";
+
+import {ClockInputs} from "./clockInputs.jsx";
+
 //create your first component
-const Clock = () => {
+export const Clock = (props) => {
   return (
-    <div className="clock">
-      <div className="inside clockIcon">
-        <p>
-          <FontAwesomeIcon icon={faClock} flip="horizontal" />
-        </p>
+    <div className="wrapper">
+      <div className="clock">
+        <div className="in clockIcon">
+          <p>
+            <FontAwesomeIcon icon={faClock} flip="horizontal" />
+          </p>
+        </div>
+        <div className="in clockSix">
+          <p>{props.clockSix % 10}</p>
+        </div>
+        <div className="in clockFive">
+          <p>{props.clockFive % 10}</p>
+        </div>
+        <div className="in clockFour">
+          <p>{props.clockFour % 10}</p>
+        </div>
+        <div className="in clockThree">
+          <p>{props.clockThree % 10}</p>
+        </div>
+        <div className="in clockTwo">
+          <p>{props.clockTwo % 10}</p>
+        </div>
+        <div className="in clockOne">
+          <p>{props.clockOne % 10}</p>
+        </div>
       </div>
-      <div className="inside clockSix">
-        <p>6</p>
-      </div>
-      <div className="inside clockFive">
-        <p>5</p>
-      </div>
-      <div className="inside clockFour">
-        <p>4</p>
-      </div>
-      <div className="inside clockThree">
-        <p>3</p>
-      </div>
-      <div className="inside clockTwo">
-        <p>2</p>
-      </div>
-      <div className="inside clockOne">
-        <p>1</p>
-      </div>
+      
+      <ClockInputs/>
     </div>
   );
 };
 
-export default Clock;
+Clock.propTypes = {
+  clockSix: PropTypes.number,
+  clockFive: PropTypes.number,
+  clockFour: PropTypes.number,
+  clockThree: PropTypes.number,
+  clockTwo: PropTypes.number,
+  clockOne: PropTypes.number,
+};
+
