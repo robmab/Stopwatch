@@ -1,10 +1,10 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-regular-svg-icons";
 
 import PropTypes from "prop-types";
 
-import {ClockInputs} from "./clockInputs.jsx";
+import { ClockInputs } from "./clockInputs.jsx";
 
 //create your first component
 export const Clock = (props) => {
@@ -35,8 +35,8 @@ export const Clock = (props) => {
           <p>{props.clockOne % 10}</p>
         </div>
       </div>
-      
-      <ClockInputs/>
+
+      <ClockInputs placeholder={props.placeholder} value={props.value} />
     </div>
   );
 };
@@ -48,5 +48,9 @@ Clock.propTypes = {
   clockThree: PropTypes.number,
   clockTwo: PropTypes.number,
   clockOne: PropTypes.number,
+  placeholder: PropTypes.string,
+  
 };
+
+
 

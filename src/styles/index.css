@@ -2,12 +2,22 @@
   border: red solid 1px;
 } */
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CLOCK */
+
 .clock {
   display: flex;
   justify-content: center;
 
   margin: 10px;
   overflow: hidden;
+  width: 98%;
 
   background-color: #080808;
   color: white;
@@ -40,4 +50,10 @@
 .clockIcon svg {
   font-size: 49px;
   margin-bottom: 2px;
+}
+
+/* INPUTS */
+
+.input-group {
+  width: 250px;
 }
