@@ -6,7 +6,28 @@ import ReactDOM from "react-dom";
 import "../styles/index.css";
 
 //import your own components
-import Clock from "./component/clock.jsx";
+import {Clock} from "./component/clock.jsx";
+
 
 //render your react application
-ReactDOM.render(<Clock />, document.querySelector("#app"));
+
+let time = 0;
+const timeRender = () => {
+  ReactDOM.render(
+    <Clock
+      clockOne={time}
+      clockTwo={Math.floor(time / 10)}
+      clockThree={Math.floor(time / 100)}
+      clockFour={Math.floor(time / 1000)}
+      clockFive={Math.floor(time / 10000)}
+      clockSix={Math.floor(time / 100000)}
+    />
+    ,
+    document.querySelector("#app")
+  );
+  time++;
+};
+
+timeRender(); //First time render
+
+setInterval(timeRender, 1000); //Bucle
