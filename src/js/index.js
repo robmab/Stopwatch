@@ -17,7 +17,7 @@ let clockOn = true;
 
 //Loop setInterval
 const timeRender = () => {
-  clockOn=true;
+  clockOn = true;
   if (!paused) {
     if (inputAlert == time) {
       color = "";
@@ -58,7 +58,7 @@ export const regTime = (e) => {
 
   //Loop setInterval
   const timeRenderNegative = () => {
-    clockOn=false;
+    clockOn = false;
 
     if (!paused) {
       if (inputAlert == time) {
@@ -108,9 +108,11 @@ export const alertClick = (e) => {
   color = "rgb(201, 252, 126)";
 
   //first render
-  if (clockOn){
-    timeRender()
-  }else{
-    timeRenderNegative()
+  if (clockOn) {
+    time--;
+    timeRender();
+  } else {
+    time++;
+    timeRenderNegative();
   }
 };
