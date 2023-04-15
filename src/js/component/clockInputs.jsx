@@ -12,7 +12,12 @@ import {
 
 //create your first component
 export const ClockInputs = (props) => {
-  console.log(props.color);
+  //not read-only
+  const style = {};
+  for (let c in props.style) {
+    style[c] = props.style[c];
+  }
+
   return (
     <div className="inputs container">
       <div className="row">
@@ -67,11 +72,11 @@ export const ClockInputs = (props) => {
         {/* BUTTONS END*/}
         {/* ALERT */}
         <div className=" alertClock col-12 col-lg-5">
-          <div  className="input-group mb-5 ">
+          <div className="input-group mb-5 ">
             <div className="input-group-prepend">
               <button
                 onClick={alertClick}
-                style={{backgroundColor:props.color}}
+                style={style}
                 className="btn btn-outline-secondary"
                 type="button"
               >
@@ -96,5 +101,5 @@ export const ClockInputs = (props) => {
 };
 
 ClockInputs.propTypes = {
-  color:PropTypes.string
+  style: PropTypes.object,
 };

@@ -8,7 +8,6 @@ import { ClockInputs } from "./clockInputs.jsx";
 
 //create your first component
 export const Clock = (props) => {
-  
   return (
     <div className="wrapper">
       <div className="clock">
@@ -37,7 +36,7 @@ export const Clock = (props) => {
         </div>
       </div>
 
-      <ClockInputs color={props.color} />
+      <ClockInputs style={props.style} />
     </div>
   );
 };
@@ -49,5 +48,5 @@ Clock.propTypes = {
   clockThree: PropTypes.number,
   clockTwo: PropTypes.number,
   clockOne: PropTypes.number,
-  color: PropTypes.string
+  style: PropTypes.object,
 };
