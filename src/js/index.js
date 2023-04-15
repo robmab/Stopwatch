@@ -76,8 +76,6 @@ const timeRenderNegative = () => {
   }
 };
 
-
-
 export const regTime = (e) => {
   let input = e.target.parentNode.parentNode.childNodes[0];
   if (input.value <= 0) return; // dont let negative input
@@ -88,6 +86,9 @@ export const regTime = (e) => {
   clearInterval(interval);
   clearInterval(negativeInt);
 
+  if (paused === true) {
+    paused = false;
+  }
   timeRenderNegative(); //First time render
   negativeInt = setInterval(timeRenderNegative, 1000); //Loop render
 };
