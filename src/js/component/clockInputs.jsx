@@ -15,7 +15,7 @@ export const ClockInputs = (props) => {
   //not read-only style
   const style = {};
   for (let i in props.style) {
-    style[i] = props.style[c];
+    style[i] = props.style[i];
   }
 
   return (
