@@ -7,7 +7,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
 }
 
 /* CLOCK */
@@ -36,7 +35,6 @@
   font-weight: bold;
   background-color: #121212;
   border: #2b2b2b 3px solid;
-  
 }
 
 .in p {
@@ -83,4 +81,18 @@
 
 .buttons button:nth-child(3) svg {
   margin-left: -2.5px;
+}
+
+@media (max-width: 1000px) {
+  .cuentaRegresiva {
+    justify-content: center;
+  }
+
+  .cuentaRegresiva div {
+    height: 5px;
+  }
+  .alertClock {
+    justify-content: center;
+    margin-top: 20px;
+  }
 }

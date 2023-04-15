@@ -12,10 +12,10 @@ import {
 
 //create your first component
 export const ClockInputs = (props) => {
-  //not read-only
+  //not read-only style
   const style = {};
-  for (let c in props.style) {
-    style[c] = props.style[c];
+  for (let i in props.style) {
+    style[i] = props.style[c];
   }
 
   return (
