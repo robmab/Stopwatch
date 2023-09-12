@@ -1,6 +1,6 @@
 # Chronometer with React
 
-![Proyecto sin título](https://github.com/robmab/Stopwatch/assets/56076087/619bd95e-15cf-466e-8a4a-883a0789a6bf)
+![Proyecto sin título](https://github.com/robmab/Stopwatch/assets/56076087/367a8f99-bc74-4ded-8571-0d130a1e3808)
 
 ### Features
 - Control buttons to start, pause and restart the time
